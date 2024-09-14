@@ -1,3 +1,15 @@
+"PET STORE REST API"
+
+
+Week 15 Promineo Tech Back End Developer Course
+
+This assignment has the following objectives:
+
+1. Demonstrate ability to manage Spring JPA relationships by adding child rows in a one-to-many relationship and a many-to-many relationship.
+
+2. Show continued mastery of Spring JPA by coding the retrieve pet store and delete pet store operations.
+_____________________________________________________________________________________________________________________
+
 Week 14 Promineo Tech Back End Developer Course
 
 This assignment has the following objectives:
