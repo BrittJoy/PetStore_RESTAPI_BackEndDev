@@ -1,8 +1,8 @@
-package power.wash.dao;
+package pet.store.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import power.wash.entity.Employee;
+import pet.store.entity.Employee;
 
 public interface EmployeeDao extends JpaRepository<Employee, Long> {
 

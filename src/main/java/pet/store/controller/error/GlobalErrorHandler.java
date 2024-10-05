@@ -1,4 +1,4 @@
-package power.wash.controller.error;
+package pet.store.controller.error;
 
 import java.util.Map;
 import java.util.NoSuchElementException;

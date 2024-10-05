@@ -1,4 +1,4 @@
-package power.wash.entity;
+package pet.store.entity;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,10 +18,9 @@ import lombok.ToString;
 
 @Entity
 @Data
-public class Client {
+public class PetStore {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-<<<<<<< HEAD:src/main/java/pet/store/entity/PetStore.java
 	private Long petStoreId;
 	private String petStoreName;
 	private String petStoreAddress;
@@ -29,35 +28,18 @@ public class Client {
 	private String petStoreState;
 	private String petStoreZip;
 	private String petStorePhone;
-=======
-	private Long clientId;
-	
-	private String clientName;
-	private String clientAddress;
-	private String clientCity;
-	private String clientState;
-	private String clientZip;
-	private String clientPhone;
->>>>>>> 4f7937385f7c6cd184e143d43d382cd1a9bcdac7:src/main/java/power/wash/entity/Client.java
 
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
 	@ManyToMany(cascade = CascadeType.PERSIST)
-<<<<<<< HEAD:src/main/java/pet/store/entity/PetStore.java
 	@JoinTable(name = "pet_store_customer", 
 	joinColumns = @JoinColumn(name = "pet_store_id"), 
 	inverseJoinColumns = @JoinColumn(name = "customer_id"))
 	private Set<Customer> customers = new HashSet<>();
-=======
-	@JoinTable(name = "client_equipment", 
-	joinColumns = @JoinColumn(name = "client_id"), 
-	inverseJoinColumns = @JoinColumn(name = "equipment_id"))
-	private Set<Equipment> equipments = new HashSet<>();
->>>>>>> 4f7937385f7c6cd184e143d43d382cd1a9bcdac7:src/main/java/power/wash/entity/Client.java
 
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
-	@OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "petStore", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<Employee> employees = new HashSet<>();
 
 }

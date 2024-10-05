@@ -1,4 +1,4 @@
-package power.wash.entity;
+package pet.store.entity;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -18,15 +18,16 @@ public class Employee {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long employeeId;
 	
-	private String employeeName;
+	private String employeeFirstName;
+	private String employeeLastName;
 	private String employeePhone;
 	private String employeeJobTitle;
 	
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
 	@ManyToOne(cascade = CascadeType.PERSIST)
-	@JoinColumn(name = "client_id")
-	private Client client;
+	@JoinColumn(name = "pet_store_id")
+	private PetStore petStore;
 	
 	
 
