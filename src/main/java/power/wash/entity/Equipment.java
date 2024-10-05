@@ -1,4 +1,4 @@
-package pet.store.entity;
+package power.wash.entity;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -15,17 +15,16 @@ import lombok.ToString;
 
 @Entity
 @Data
-public class Customer {
+public class Equipment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long customerId;
-	private String customerFirstName;
-	private String customerLastName;
-	private String customerEmail;
+	private Long equipmentId;
+	private String equipmentName;
+
 	
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
-	@ManyToMany(mappedBy = "customers", cascade = CascadeType.PERSIST)
-	private Set<PetStore> petStores = new HashSet<>();
+	@ManyToMany(mappedBy = "equipment", cascade = CascadeType.PERSIST)
+	private Set<Client> clients = new HashSet<>();
 
 }

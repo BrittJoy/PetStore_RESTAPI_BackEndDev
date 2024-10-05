@@ -1,15 +1,14 @@
-package pet.store.controller.model;
+package power.wash.controller.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class PetStoreEmployee {
+public class EmployeeData {
 
 	private Long employeeId;
-	private String employeeFirstName;
-	private String employeeLastName;
+	private String employeeName;
 	private String employeePhone;
 	private String employeeJobTitle;
 	
